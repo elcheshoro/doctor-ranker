@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'eurostile';
+    src: url('/fonts/doctor.ttf') format('truetype');
+}
+
+body {
+    font-family: eurostile;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+:root {
+    --color-background: #081526;
+    --color-primary: #1D4E76;
+    --color-primary-light: #38DFFC;
+    --color-secondary: #D93A1A;
+    --color-secondary-light: #EE917F;
+    --color-text: white;
+
+    --font-size-small: 14px;
+    --font-size-medium: 18px;
+    --font-size-large: 24px;
+}
+
+button, input[type="submit"], input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
