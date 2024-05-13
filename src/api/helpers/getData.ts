@@ -18,8 +18,7 @@ const getData = async () => {
 
     let episodes: EpisodeData[] = [];
 
-    while (findingResults) {
-        console.log(`processing season ${season}`)
+    while (findingResults && season === 1) {
         const { doctor, assistant } = await getCastForSeason(page, season)
 
         const seasonEpisodes = await getEpisodesForSeason(page, season, doctor, assistant);
@@ -34,8 +33,6 @@ const getData = async () => {
     }
 
     await browserInstance.close();
-
-    console.log(`GOT ${episodes.length} episodes`)
 
     await writeFileData(episodes);
 

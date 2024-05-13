@@ -7,7 +7,6 @@ const postHandler = async (
 ) => {
   try {
     const data = await getData();
-    console.log('GOT ALL DATA')
     res.json(data);
   } catch (e) {
     console.log(e);
